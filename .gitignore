@@ -1,1 +1,1 @@
-provider-variables.tf
+*.tfvars
