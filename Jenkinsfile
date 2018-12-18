@@ -10,7 +10,9 @@ static isPullRequestFromFork(env) {
      
      checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[url: 'https://github.com/ppandiya/aws-multi-env.git']]])
 
-   
+     jenkins.echo ${scm.GIT_BRANCH}
+     jenkins.echo ${scm.GIT_URL}
+     
    jenkins.echo ${jenkins.env}
 
 if (isPullRequestFromFork) {
