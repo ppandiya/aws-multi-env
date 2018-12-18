@@ -7,6 +7,9 @@ static isPullRequestFromFork(env) {
 //def isPullRequestFromFork(jenkins.env)
 
  def runPipeline() {
+     
+     checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[url: 'https://github.com/ppandiya/aws-multi-env.git']]])
+
    
    jenkins.echo ${jenkins.env}
 
