@@ -4,7 +4,7 @@ static isPullRequestFromFork(env) {
     return env?.getProperty('CHANGE_FORK') ? true : false
 }
 
-def isPullRequestFromFork(jenkins.env)
+//def isPullRequestFromFork(jenkins.env)
 
  def runPipeline() {
    
