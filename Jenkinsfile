@@ -1,4 +1,4 @@
-# This is a pipeline
+// This is a pipeline
 
 static isPullRequestFromFork(env) {
     return env?.getProperty('CHANGE_FORK') ? true : false
